@@ -3,11 +3,9 @@
 
 #import relevant modules
 import numpy as np
-import astropy.table as table
-import astropy.units as u
 from astropy.cosmology import FlatLambdaCDM
-from hankel import HankelTransform
-from hankelConvolve import hankelConvolve
+#from hankel import HankelTransform
+#from hankelConvolve import hankelConvolve
 from scipy.interpolate import InterpolatedUnivariateSpline as spline
 from scipy.integrate import quad
 
@@ -116,6 +114,10 @@ class halomodel():
     def E1h(self, r): #1-halo term
         return self.Estar(r)+self.delEnfw(r)
 
+
+    #remove offset group term for display purposes
+    #it is unlikely that someone will have the Hankel package
+    '''
     def delEOG(self, r): #offset group term      #this doesn't work right now
         M200 = self.M200 #save M200 of halo
         self.setMass(self.Mgroup) #set group mass as mass
@@ -137,6 +139,8 @@ class halomodel():
             dEOG.append( Mproj(rad)/(np.pi*rad*rad) - EOG(rad) )
 
         return dEOG
+    '''
+
 
     def delE(self, r): #total density profile
         return self.E1h(r) + self.delEOG(r)

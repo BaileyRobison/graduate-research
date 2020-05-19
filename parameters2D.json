@@ -1,0 +1,10 @@
+{
+   "bin_range": 100,
+   "num_bins": 20,
+   "scale": 1000,
+   "data_path": "data/",
+   "source_path": "sources_sim.csv",
+   "lens_path": "lenses_sim.csv",
+   "output_path": "results/",
+   "plot_path": "plots/"
+}

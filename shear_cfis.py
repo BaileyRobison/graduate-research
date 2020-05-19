@@ -23,6 +23,7 @@ parser = argparse.ArgumentParser(description='Stack shears',
                                         'estimators \t string \t CJ \t\t\t estimators to use: either CJ or SCH \n' +
                                         'r_inner \t float \t\t 50 \t\t\t inner radius of radial bins \n' +
                                         'r_outer \t float \t\t 4000 \t\t\t outer radius of radial bins \n' +
+                                        'num_bins \t float \t\t 7 \t\t\t number of radial bins \n' +
                                         'h_factor \t Boolean \t true \t\t\t whether or not to use units with h \n' +
                                         'data_path \t string \t \"data/\" \t\t path to input files \n'  +
                                         'source_path \t string \t \"sources_sim.csv\" \t path to source data \n' + 
