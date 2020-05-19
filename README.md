@@ -15,14 +15,24 @@ There are two main functions that the sample scripts in this repository perform.
 
 To generate data used for creating the radial density plots, run
 
-`shear_cfis.py [-h] [-v]`
+`python shear_cfis.py [-h] [-v]`
 
 The script loops through the lens sample and identifies the appropriate background sources. For each lens, the sources and coordinate frame are rotated to align with the major axis of the lens, the shear is calculcated, and then stacked into radial bins. The stacking is done by a Stacker object which is described in `shear_stacker.py` . This script is controlled by parameters in the file 'parameters.json' . Running the script in help mode with `-h` in the command line will describe each of these parameters. Adding `-v` will run the script in verbose mode. This will display progress after every 100 lenses, but this is not necessary with the small simulated dataset.
 
 To display these results, run
 
-`shear_plot.py [-h]`
+`python shear_plot.py [-h]`
 
 This will plot the results from the radial shear stacking. A model will be fit to the data, which is described in `halomodel.py` . This script is controlled by the parameter file 'parameters.json' . Running the script in help mode with `-h` in the command line will describe each of these parameters.
 
+To generate data used for creating 2D shear and mass maps, run
 
+`python stickplot_table.py [-h] [-v]`
+
+This script will perform the same shear stacking process as `shear_cfis.py` but the data will be binned in 2D instead of radially. This script is controlled by parameters in the file 'parameters2D.json' . Running the script in help mode with `-h` in the command line will describe each of these parameters. Adding `-v` will run the script in verbose mode. This will display progress after every 100 lenses, but this is not necessary with the small simulated dataset.
+
+To display these results, run
+
+`python stickplot_plot.py [-h]`
+
+This will plot the 2D shear map and 2D mass map. A model will be fit to the data, which is described in `halomodel.py` . This script is controlled by the parameter file 'parameters2D.json' . Running the script in help mode with `-h` in the command line will describe each of these parameters.
