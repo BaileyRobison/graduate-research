@@ -1,2 +1,7 @@
 # graduate-research
 Measurement of quadrupole shear from weak gravitational lensing
+
+A sample of scripts and plots from my graduate research. The goal of this project is to use weak lensing to detect and measure dark matter halo ellipticity. Dark matter clusters around galaxies in halos that are often assumed to be spherical. However, we expect there to be a significant amount of anisotropy in the distribution of dark matter. Dark matter halos are interacted upon by graviational forces which may perturb them into an elliptical shape.
+
+In this project, use weak lensing to observe the distribution of dark matter around galaxies. Dark matter is difficult to detect. It doesn't interact with electromagnetic forces, meaning it cannot be observed directly. However, we can statistically detect dark matter using gravitational lensing. The graviational forces of a massive object will bend and distort the background light of the objects behind it. For a round halo, this will result in a tangential shear around the center of the mass distribution. However, this effect is insignificant for a single galaxy. Instead we stack hundred of thousands of foreground galaxies. If we assume there is no prefered orientation for background galaxies, a statistically significant detection of tangential alignment reveals the foreground mass distribution. This can be extended further to study the shape of dark matter halos in general.
+
