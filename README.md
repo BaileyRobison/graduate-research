@@ -12,3 +12,11 @@ The 'results' folder contains data that is produced by some of the scripts and u
 The 'plots' folder contains results from the potting scripts using the 'results' folder. The plots 'shearCJ.png' and 'shearSCH.png' contain radial density profiles of the dark matter halo. The leftmost panel is the spherical monopole term, and the two other panels contain various estimators used for measuring the quadrupole term (which describes the ellipticity). The plot 'stickplot_gamma.png' displays the observed shear (stretching from lensing), a 1D monopole fit, a 2D monopole fit, and the residual from the quadrupole. The plot 'stickplot_kappa.png' displays the reconstructed mass map from the shear. The panels display the elliptical dark matter halo, a monopole fit, and the residual quadrupole mass distribution.
 
 There are two main functions that the sample scripts in this repository perform. The first is creating the radial density plots, which is done using `shear_cfis.py` and `shear_plot.py` . The second function is creating the 2D shear and mass maps, which is done using `stickplot_table.py` and `stickplot_plot.py` .
+
+To generate data used for creating the radial density plots, run
+`shear_cfis.py [-h] [-v]`
+The script loops through the lens sample and identifies the appropriate background sources. For each lens, the sources and coordinate frame are rotated to align with the major axis of the lens, the shear is calculcated, and then stacked into radial bins. This script is controlled by parameters in the file 'parameters.json' . Running the script in help mode with `-h` in the command line will describe each of these parameters. Adding `-v` will run the script in verbose mode. This will display progress after every 100 lenses, but this is not necessary with the small simulated dataset.
+
+
+
+
