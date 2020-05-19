@@ -41,14 +41,28 @@ f.close()
 estimators = params['estimators']
 radii = np.logspace(np.log10(params['r_inner']), np.log10(params['r_outer']), params['num_bins']) #radial bins for stacking
 h_factor = params['h_factor']
+data_path = params['data_path']
 lens_path = params['lens_path']
 output_path = params['output_path']
 plot_path = params['plot_path']
 
-lenses = table.Table.read(lens_path, format='ascii.csv')
+lenses = table.Table.read(data_path + lens_path, format='ascii.csv')
 z_lens = np.median(lenses['z'])
 
 results = table.Table.read(output_path+'shear'+estimators+'_output.csv', format='ascii') #read in results from shear_fast.py
+
+
+#divide error bars to sim more data
+#account for file size limitations
+#increase by N of simulated data -> decrease by sqrt{N} in error bars
+factorExtra = 100
+if estimators=='SCH':
+    cols = ['AvgEErr','AvgEErr_Q1','AvgEErr_Q2']
+elif estimators=='CJ':
+    cols = ['AvgEErr','AvgE1Perr','AvgE1Merr','AvgE2Perr','AvgE2Merr']
+for c in cols:
+    results[c] /= np.sqrt(factorExtra)
+    
 
 h = 0.7
 if estimators == 'SCH':
