@@ -1,0 +1,12 @@
+{
+   "estimators": "CJ",
+   "r_inner": 50,
+   "r_outer": 4000,
+   "num_bins": 7,
+   "h_factor": true,
+   "data_path": "data/",
+   "source_path": "sources_sim.csv",
+   "lens_path": "lenses_sim.csv",
+   "output_path": "results/",
+   "plot_path": "plots/"
+}
