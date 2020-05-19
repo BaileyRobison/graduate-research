@@ -1,7 +1,12 @@
 # graduate-research
-Measurement of quadrupole shear from weak gravitational lensing
+Measurement of elliptical dark matter halos from weak gravitational lensing
 
 A sample of scripts and plots from my graduate research. The goal of this project is to use weak lensing to detect and measure dark matter halo ellipticity. Dark matter clusters around galaxies in halos that are often assumed to be spherical. However, we expect there to be a significant amount of anisotropy in the distribution of dark matter. Dark matter halos are interacted upon by graviational forces which may perturb them into an elliptical shape.
 
 In this project, use weak lensing to observe the distribution of dark matter around galaxies. Dark matter is difficult to detect. It doesn't interact with electromagnetic forces, meaning it cannot be observed directly. However, we can statistically detect dark matter using gravitational lensing. The graviational forces of a massive object will bend and distort the background light of the objects behind it. For a round halo, this will result in a tangential shear around the center of the mass distribution. However, this effect is insignificant for a single galaxy. Instead we stack hundred of thousands of foreground galaxies. If we assume there is no prefered orientation for background galaxies, a statistically significant detection of tangential alignment reveals the foreground mass distribution. This can be extended further to study the shape of dark matter halos in general.
 
+In the folder labelled 'data' I have included simulated data of sources (background galaxies) and lenses (background galaxies). In this project, I am using data from the Canada-France Imaging Survey (CFIS) which covers over 5000 square degrees on the sky and contains hundreds of millions of objects. The small subset of this data that I could upload to github wouldn't reveal any statistically significant results. Instead I have constructed simulated data of an ideal elliptical dark matter halo to demonstrate how the scripts work and the expected results.
+
+The 'results' folder contains data that is produced by some of the scripts and used by the plotting scripts.
+
+The 'plots' folder contains results from the potting scripts using the 'results' folder. The plots 'shearCJ.png' and 'shearSCH.png' contain radial density profiles of the dark matter halo. The leftmost panel is the spherical monopole term, and the two other panels contain various estimators used for measuring the quadrupole term (which describes the ellipticity).
